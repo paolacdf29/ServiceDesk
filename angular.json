@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MDApp"
+    }
+  },
+  "defaultProject": "MDApp",
+  "cli": {
+    "analytics": false
+  }
 }
