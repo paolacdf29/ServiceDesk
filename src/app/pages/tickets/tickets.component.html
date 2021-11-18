@@ -1,8 +1,33 @@
-<div class="card">
-    <h5 class="card-header">Featured</h5>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
+<article>
+  <section>
+  <div class="reclamos">
+      <header class="Cabecera">
+          <h3 style="color: White;">Reclamos creados</h3>
+      </header>
+          <table>
+         
+              <tr>
+              <th>HD</th>
+              <th>Estado</th>
+              <th>Fecha apertura</th>
+              <th>Resumen</th>
+              <th>Fecha cierre</th>
+              <!-- <th>Resolucion</th> -->
+              </tr>
+          
+          
+              <!-- rescatar cantidad de filas de la db -->
+              <tr *ngFor='let reclamo of Reclamos| async'>
+              <td>{{reclamo.id_reclamo}}</td>
+              <td> {{reclamo.estado}}</td>
+              <td> {{reclamo.fecha_creac}} </td>
+              <td>{{reclamo.detalle}} </td>
+              <td>{{reclamo.fecha_cierre}}</td>
+              <!-- <td>rescatar dato de db </td> -->
+              </tr>                    
+         
+          </table>
+      <a href="/"><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
+
+      </div>
+  </section>
