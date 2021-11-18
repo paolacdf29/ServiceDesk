@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ClientesComponent } from './pages/clientes/clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     TicketsComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

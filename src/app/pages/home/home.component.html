@@ -1,0 +1,16 @@
+<article>
+    <section class="login">
+    <div>
+        <h1>Ingresar usuario y contraseña</h1>
+        <form method="post">
+            <input type="text" name="u" placeholder="Usuario" required="required" [(ngModel)]="usuario.usuario">
+            <input type="password" name="p" placeholder="Contraseña" required="required" [(ngModel)]="usuario.contrasena" >
+            <button type="submit" class="btn btn-primary btn-block btn-large" (click) = "loger()" >Enviar</button>
+        </form>              
+    </div>
+    <div>
+    <a href="recup_pass.php"> <p> Olvide la contraseña</p></a> <br>
+    </div>
+    </section>
+
+</article>
