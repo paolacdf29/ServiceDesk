@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { cliente } from '../../interfaces/interfaces';
+import { RrhhService } from '../../servicios/rrhh.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-cliente',
@@ -8,15 +9,30 @@ import { cliente } from '../../interfaces/interfaces';
 })
 export class RegistroClienteComponent implements OnInit {
 
-  NuevoCliente: cliente;
+  msj: string = '';
+  NuevoCliente: any = {
+    id_sucursal: 19,
+    cuit: null,
+    razon_soc: '',
+    contacto: '',
+    telefono: null,
+    email: '',
+    usuario: '',
+    contrasena: '' 
+  };
 
-  constructor() { }
+  constructor(private rrhh: RrhhService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  registrarCliente(){
-    console.log(this.NuevoCliente.razon_soc);
+  async registrarCliente(){
+    if (await this.rrhh.crearUsuario(this.NuevoCliente)){
+      this.router.navigateByUrl('/VerClientes');
+    }else{
+      this.msj = 'No se pudo crear al ususario'
+    };
   }
 
 }

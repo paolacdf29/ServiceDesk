@@ -3,21 +3,21 @@
     <div>
         <h1>Crear Usuario para Clientes</h1>
         <form method="post">
-            <!-- <input type="text" name="nombre" placeholder="Nombre" required="required" [(ngModel)]="NuevoCliente.razon_soc">
+            <input type="text" name="nombre" placeholder="Nombre" required="required" [(ngModel)]="NuevoCliente.razon_soc">
             <input type="text" name="cuit" placeholder="Cuit" required="required" [(ngModel)]="NuevoCliente.cuit">
-            <input type="text" name="razon_social" placeholder="Razon Social" required="required">
-            <input type="text" name="localidad" placeholder="Localidad" required="required">
+            <!-- <input type="text" name="razon_social" placeholder="Razon Social" required="required"> -->
+            <!-- <input type="text" name="localidad" placeholder="Localidad" required="required"> -->
             <input type="text" name="direccion" placeholder="Direccion" required="required" [(ngModel)]="NuevoCliente.contacto">                    
             <input type="tel"  name="tel"  placeholder="Telefono" required="required" [(ngModel)]="NuevoCliente.telefono">
             <input type="email" placeholder="Correo Electronico" required="required" [(ngModel)]="NuevoCliente.email">
             <input type="usuario" placeholder="Usuario" required="required" [(ngModel)]="NuevoCliente.usuario">
-            <input type="password" placeholder="Contraseña" required="required" [(ngModel)]="NuevoCliente.contrasena">              -->
+            <input type="password" placeholder="Contraseña" required="required" [(ngModel)]="NuevoCliente.contrasena">             
 
             <button type="submit" class="btn btn-primary btn-block btn-large" (click)='registrarCliente()'>Enviar</button>
         </form>              
     </div>
     <div>
-    <a href="/"><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
+    <a routerLink='/HomeComercial'><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
     </div>
 
     </section>

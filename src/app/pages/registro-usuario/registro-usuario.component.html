@@ -1,0 +1,32 @@
+<article>
+    <section class="crear_us">
+    <div>
+        <h1>Crear Usuario para Empleado</h1>
+        <form method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required="required" >
+            <input type="text" name="apellido" placeholder="Apellido" required="required" >
+            <input type="text" name="tipo_doc" placeholder="Tipo Documento" required="required" >
+            <input type="text" name="dni" placeholder="Número de dni" required="required" >
+            <input type="text" name="localidad" placeholder="localidad" required="required">
+            <input type="text" name="direccion" placeholder="direccion" required="required">                    
+            <input type="tel"  name="tel"  placeholder="Telefono" required="required">
+            <input type="email" placeholder="Correo Electronico" required="required">
+            <select name="sector" placeholder="Sector" required="required">
+                <option value="-" disabled selected>Sector</option>
+                <option value="comercial"> Comercial </option>
+                <option value="mda"> MDA </option>
+                <option value="rrhh"> RRHH</option>
+                <option value="tecnico"> Tecnico</option>
+            </select>
+            <!-- usuario puede ser el dni, pass puede ser en un principio dni y que el empleado lo modifique luego -->
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Enviar</button>
+        </form>              
+    </div>
+    <div>
+    <a routerLink='/homeRrhh'><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
+    </div>
+
+    </section>
+
+</article>

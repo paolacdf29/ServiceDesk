@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SesionService } from '../../servicios/sesion.service';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +14,20 @@ export class HomeComponent implements OnInit {
     contrasena: ""
   }
 
-  constructor(private  router: Router ) { 
+  msj: string = '';
 
-
-  }
+  constructor(private router: Router,
+              private sesionServ: SesionService) { }
 
   ngOnInit(): void {
   }
-  loger(){
-    this.router.navigateByUrl("/clientes");
+
+  async loger(){
+    await this.sesionServ.loginCliente(this.usuario.usuario, this.usuario.contrasena);
+    if (this.sesionServ.Logeado) {
+      this.router.navigateByUrl("/HomeClientes");
+    }else{
+      this.msj = 'Usuario y/o contraseña invalido';
+    }
   }
 }

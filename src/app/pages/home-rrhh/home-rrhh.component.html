@@ -1,0 +1,16 @@
+<article>
+    <section class="opcion_rrhh"> 
+        <div >
+            <h1 style="color: white; text-align: center;">Panel de recursos humanos</h1>
+            <a routerLink='/VerUsuarios'><button type="submit" class="btn btn-primary btn-block btn-large">Ver Usuarios</button></a>
+
+            <a routerLink='/ModificaUsusario'><button type="submit" class="btn btn-primary btn-block btn-large">Modificar Usuarios</button></a>
+
+            <a routerLink='/RegistroUsuario'><button style="margin-top:30px;" type="submit" class="btn btn-primary btn-block btn-large">Crear usuarios</button></a>
+        </div>
+        
+        <div>
+            <button (click)="logout()" style="margin-top:70px; width:150px; margin-left:70px;" type="submit" class="btn btn-primary btn-block btn-large sesion">Cerrar Sesion</button>
+        </div>
+    </section>
+</article>

@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { RrhhService } from '../../servicios/rrhh.service';
 
 @Component({
-  selector: 'app-modifica-cliente',
-  templateUrl: './modifica-cliente.component.html',
-  styleUrls: ['./modifica-cliente.component.css']
+  selector: 'app-modifica-usuario',
+  templateUrl: './modifica-usuario.component.html',
+  styleUrls: ['./modifica-usuario.component.css']
 })
-export class ModificaClienteComponent implements OnInit {
+export class ModificaUsuarioComponent implements OnInit {
 
   Clientes: Observable<cliente[]>;
 

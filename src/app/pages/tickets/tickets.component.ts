@@ -13,12 +13,14 @@ export class TicketsComponent implements OnInit {
 
   Reclamos: Observable<reclamo[]>;
 
-  constructor(public tickets: TicketsService) { }
+  constructor(private ticketsServ: TicketsService) { }
   //constructor() { }
 
 
   ngOnInit(): void {
-    this.Reclamos = this.tickets.getTickets();
+    console.log('ingresa');
+    //this.Reclamos = this.ticketsServ.getTickets();
+    this.Reclamos = this.ticketsServ.getTicketsbyClient();
   }
 
 }

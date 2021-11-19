@@ -7,17 +7,16 @@
           <table>
          
               <tr>
-              <th>HD</th>
+              <th>ID</th>
               <th>Estado</th>
               <th>Fecha apertura</th>
               <th>Resumen</th>
               <th>Fecha cierre</th>
               <!-- <th>Resolucion</th> -->
-              </tr>
-          
+              </tr>             
           
               <!-- rescatar cantidad de filas de la db -->
-              <tr *ngFor='let reclamo of Reclamos| async'>
+              <tr *ngFor="let reclamo of Reclamos | async">
               <td>{{reclamo.id_reclamo}}</td>
               <td> {{reclamo.estado}}</td>
               <td> {{reclamo.fecha_creac}} </td>
@@ -27,7 +26,7 @@
               </tr>                    
          
           </table>
-      <a href="/"><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
+      <a routerLink='/HomeClientes'><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a>
 
       </div>
   </section>

@@ -1,0 +1,41 @@
+<article>
+    <section>
+    <div class="select_us">
+        <header class="Cabecera">
+            <h3 style="color: White;"></h3>
+        </header>
+            <table>
+            <thead>
+                <tr>
+                <th>Nombre y Apellido</th>
+                <!-- <th>Apellido</th> -->
+                <!-- <th>Tipo de documento</th> -->
+                <th>Cuit</th>
+                <!-- <th>Localidad</th> -->
+                <th>Dirección</th>
+                <th>Telefono</th>
+                <th>Correo Electronico</th>     
+                <th>Sector</th>         
+                <th> Modificar </th>         
+                
+                </tr>
+            </thead>
+            <tbody>
+                <!-- rescatar cantidad de filas de la db -->
+                <tr *ngFor='let cliente of Clientes |async'>
+                <td> {{cliente.razon_soc}} </td>
+                <td> {{cliente.cuit}} </td>
+                <td> {{cliente.contacto}} </td>
+                <td> {{cliente.telefono}} </td>
+                <td> {{cliente.email}} </td>
+                <td> {{cliente.id_sucursal}} </td>
+                <td><button type="submit" class="btn btn-primary btn-block btn-large">Modificar</button> </td>
+                </tr>                    
+            </tbody>
+            </table>
+        <a routerLink='/homeRrhh'><button type="submit" style="width: 30%;	margin: 0 auto;" class="btn btn-primary btn-block btn-large">Volver</button></a>
+
+        </div>
+    </section>
+
+</article>

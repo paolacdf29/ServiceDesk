@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { SesionService } from '../../servicios/sesion.service';
 
 @Component({
-  selector: 'app-home-comercial',
-  templateUrl: './home-comercial.component.html',
-  styleUrls: ['./home-comercial.component.css']
+  selector: 'app-home-clientes',
+  templateUrl: './home-clientes.component.html',
+  styleUrls: ['./home-clientes.component.css']
 })
-export class HomeComercialComponent implements OnInit {
+export class HomeClientesComponent implements OnInit {
 
-  constructor(private router: Router,
+  constructor(private route: Router,
               private sesionServ: SesionService) { }
 
   ngOnInit(): void {
@@ -17,7 +17,7 @@ export class HomeComercialComponent implements OnInit {
 
   async logout(){
     if (await this.sesionServ.logout){
-      this.router.navigateByUrl('/');
+      this.route.navigateByUrl('/');
     }
   }
 }

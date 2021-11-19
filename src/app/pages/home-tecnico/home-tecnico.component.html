@@ -1,0 +1,42 @@
+<article>
+    <section>
+    <div class="reclamos">
+        <h1 style="color: white; text-align: center;">Penel de tecnicos</h1>
+        <br>
+        <header class="Cabecera">
+            <h3 style="color: White;">Reclamos activos</h3>
+        </header>
+            <table>
+           
+                <tr>
+                <th>HD</th>
+                <th>Prioridad</th>
+                <th>Fecha apertura</th>
+                <th>Resumen</th>
+                <th>Sucursal</th>
+                <th>Prioridad</th>
+                </tr>
+            
+            
+                <!-- rescatar cantidad de filas de la db -->
+                <!-- Reclamos SIN resolucion (abiertos) asignados al tecnico -->
+                <tr *ngFor='let reclamo of Reclamos |async'>
+                <td>{{reclamo.id_reclamo}}  </td>
+                <td> {{reclamo.prioridad}}</td>
+                <td> {{reclamo.fecha_creac}} </td>
+                <td> {{reclamo.detalle}} </td>
+                <td>{{reclamo.id_sucursal}} </td>
+                <td><button type="submit" class="btn btn-primary btn-block btn-large" style="width:70%;" routerLink='/resolucion'>Cargar</button> </td>
+                </tr>                    
+           <!-- Una vez creada la resolucion se asigna la fecha actual como fecha de cierre y desaparece de la lista del tecnico --> 
+            </table>
+        <a routerLink='/homeTecnico'><button type="submit" class="btn btn-primary btn-block btn-large">Volver</button></a> 
+
+        <div>
+            <button (click)="logout()" style="margin-top:70px; width:150px; margin-left:70px;" type="submit" class="btn btn-primary btn-block btn-large sesion">Cerrar Sesion</button>
+        </div>
+        
+        </div>
+    </section>
+
+</article>

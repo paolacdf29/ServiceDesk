@@ -5,11 +5,13 @@
         <form method="post">
             <input type="text" name="u" placeholder="Usuario" required="required" [(ngModel)]="usuario.usuario">
             <input type="password" name="p" placeholder="Contraseña" required="required" [(ngModel)]="usuario.contrasena" >
+            <p style="color: white">{{this.msj}}</p>
             <button type="submit" class="btn btn-primary btn-block btn-large" (click) = "loger()" >Enviar</button>
         </form>              
     </div>
     <div>
-    <a href="recup_pass.php"> <p> Olvide la contraseña</p></a> <br>
+    <a routerLink='/recuPass'> <p> Olvide la contraseña</p></a> <br>
+    <a routerLink='/login'> <p> Soy parte de EnergyLink</p></a> <br>
     </div>
     </section>
 

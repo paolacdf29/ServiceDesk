@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { reclamo } from '../../interfaces/interfaces';
+import { TicketsService } from '../../servicios/tickets.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-reclamo',
@@ -8,14 +10,17 @@ import { reclamo } from '../../interfaces/interfaces';
 })
 export class CrearReclamoComponent implements OnInit {
 
-  NuevoReclamo: reclamo;
+  NuevoReclamo: string = '';
 
-  constructor() { }
+  constructor(private ticketServ: TicketsService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  enviaReclamo(){
-    console.log('Envia el reclamo');
+  async enviaReclamo(){
+    if (await this.ticketServ.crearTicket(this.NuevoReclamo)){
+      this.router.navigateByUrl('/tickets');
+    }
   }
 }
